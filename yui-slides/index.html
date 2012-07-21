@@ -175,7 +175,7 @@
     <span class="pln"><b>var</b> Todo = <b>Y.Base</b>.create(<em>'Todo'</em>, Y.Model, [<strong>Y.ModelSync.REST</strong>], {</span>
 
         // Set the URL that we map CRUD to REST to in our REST API.
-        // In this case, we send our HTTP requests to '/todos'
+        // In this case, we send our HTTP requests to '/todos/:id'
         <strong>root: 'todos'</strong>,
 
         // Toggle the completed state of the Todo.
@@ -211,7 +211,7 @@
           <pre class="prettyprint">
     <span class="pln"><b>var</b> Todo = <b>Y.Base</b>.create(<em>'Todo'</em>, Y.Model, [<strong>Y.ModelSync.Socket</strong>], {</span>
 
-        // Our Model will now listen for WebSocket events with a 'todos:' header
+        // Our Model will now listen for Socket events with a 'todos/:id' header
         <strong>root: 'todos'</strong>,
 
         // Toggle the completed state of the Todo.
